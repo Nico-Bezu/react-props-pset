@@ -1,14 +1,15 @@
 import './RandomCard.css';
 
-function RandomCard({ value, description, backgroundColor }) {
+function RandomCard({description, backgroundColor }) {
 
+  const value = Math.floor(Math.random() * 13) + 1;
   const handleClick = () => {
     alert(alertMessage);
   };
 
   return (
     <button className="random-card" style={{ backgroundColor: bgcolor }} onClick={handleClick}>
-      {text}
+          <div className="card-description">{description}</div>
     </button>
   );
 }
