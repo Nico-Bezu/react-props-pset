@@ -2,7 +2,7 @@ import './RandomCard.css';
 
 function RandomCard({value, backgroundColor }) {
 
-  var description
+  let description
   if (value < 10) {
     description = "small card"
   }
