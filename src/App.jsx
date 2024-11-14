@@ -13,7 +13,6 @@ function App() {
       <CustomButton text="Who am I?" bgcolor="cornflowerblue" alertMessage= "the number game!" />
       {/* Add your custom components here */}
       <RandomCard value={0} backgroundColor={"brown"} />
-      <HistoryTracker history = {[]} hcolor='green'/>
     </>
   );
 }

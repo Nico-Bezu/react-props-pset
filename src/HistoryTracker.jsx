@@ -9,7 +9,7 @@ function HistoryTracker({history, hcolor}) {
     <ul>
         {history.map((entry, index) => (
             <li key={index} style = {{backgroundColor: hcolor}}>
-                {entry.value}
+                {entry}
             </li>
         ))}
     </ul>
