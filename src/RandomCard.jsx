@@ -30,11 +30,15 @@ function RandomCard({val = 0, backgroundColor}) {
   };
 
   return (
+    <div className='random-card-container'>
     <button className="random-card" style={{ backgroundColor: desColor }} onClick={handleClick}>
           <div className="card-value">{value}</div>
           <div className="card-description">{description}</div>
     </button>
-    
+
+
+    <ProgressBar progress={value} pcolor='blue'/>  
+    </div>
   );
 }
 

@@ -2,8 +2,21 @@ import { useState } from 'react';
 import './ProgressBar.css';
 
 function ProgressBar({progress, pcolor = "green"}) {
-    const progressWidth = Math.min(100, Math.max (0, progress));
+    const progressWidth = Math.min(110, Math.max (-10, progress));
 
+    let desColor
+  if (progress <= 10 && progress >= 0) {
+    desColor = "orange"
+  }
+  else if (progress < 0) {
+    desColor = "red"
+  } 
+  else if (progress >= 10 && progress < 100) {
+    desColor = "yellow"
+  }
+  else {
+    desColor = "green"
+  }
     
 
   return (
@@ -12,7 +25,7 @@ function ProgressBar({progress, pcolor = "green"}) {
             className = 'progress-bar'
             style = {{
                 width: `${progressWidth}%`,
-                backgroundColor: pcolor,
+                backgroundColor: desColor,
             }}
        />
        <span className='progress-label'>{`${progressWidth}%`}</span>

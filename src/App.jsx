@@ -12,7 +12,6 @@ function App() {
       <CustomButton text="Click Me" bgcolor="cornflowerblue" alertMessage= "the big ten!" />
       {/* Add your custom components here */}
       <RandomCard value={6} backgroundColor={"brown"} />
-      <ProgressBar progress={0} pcolor= 'red' />
     </>
   );
 }

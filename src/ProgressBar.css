@@ -14,18 +14,5 @@
     color: white;
 }
 
-.progress-bar::before {
-    position: absolute;
-    content: attr(progress-label);
-    align-items: center;
-    left: .5m;
-    top: .5em;
-    bottom: .5em;
-    width: calc(var(width, 0) * 1%);
-    min-width: 2rem;
-    max-width: calc(100% - 1em);
-    background-color: aquamarine;
-    border-radius: 1em;
-    padding: 1em;
-}
+
 
