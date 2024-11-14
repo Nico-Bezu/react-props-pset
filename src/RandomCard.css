@@ -6,3 +6,13 @@
     border-radius: 8px;
     margin: 10px;
   }
+
+.card-value {
+  font-size: 1.5;
+  font-weight: bold;
+}
+
+.card-description {
+  font-size: 1;
+  color: cadetblue;
+}
