@@ -4,7 +4,7 @@ import './ProgressBar.css';
 function ProgressBar({progress, pcolor = "green"}) {
     const progressWidth = Math.min(110, Math.max (-10, progress));
 
-    let desColor
+    let desColor 
   if (progress <= 10 && progress >= 0) {
     desColor = "orange"
   }

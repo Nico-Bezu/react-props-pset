@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import './RandomCard.css';
 import ProgressBar from './ProgressBar';
+import HistoryTracker from './HistoryTracker';
 
 function RandomCard({val = 0, backgroundColor}) {
 
   const [value, setValue] = useState(val);
+  let [history, setHistory] = useState([0]);
+
   let description
   let desColor
   if (value <= 10 && value >= 0) {
@@ -23,10 +26,13 @@ function RandomCard({val = 0, backgroundColor}) {
     description = "insane card"
     desColor = "green"
   }
- 
+
   const handleClick = () => {
     const newVal = (Math.floor(Math.random() * 111) - 3);
     setValue(newVal)
+    let newHistory = [...history];
+    newHistory.push(newVal);
+    setHistory(newHistory);
   };
 
   return (
@@ -35,9 +41,8 @@ function RandomCard({val = 0, backgroundColor}) {
           <div className="card-value">{value}</div>
           <div className="card-description">{description}</div>
     </button>
-
-
-    <ProgressBar progress={value} pcolor='blue'/>  
+    <ProgressBar progress={value} pcolor='blue'/> 
+    <HistoryTracker history={history} hcolor={desColor}/>
     </div>
   );
 }
