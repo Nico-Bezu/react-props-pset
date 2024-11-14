@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import './RandomCard.css';
+import ProgressBar from './ProgressBar';
 
-function RandomCard({val = 0, backgroundColor }) {
+function RandomCard({val = 0, backgroundColor}) {
+
   const [value, setValue] = useState(val);
   let description
   let desColor
@@ -32,6 +34,7 @@ function RandomCard({val = 0, backgroundColor }) {
           <div className="card-value">{value}</div>
           <div className="card-description">{description}</div>
     </button>
+    
   );
 }
 
